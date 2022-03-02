@@ -29,3 +29,12 @@ game.Players.PlayerAdded:Connect(function(plr)
         
     end)
 end)
+
+event.OnServerEvent:Connect(function(plr)
+        local plrs = game.Players:GetPlayers()
+    
+        for i, plrboi in ipairs(plrs) do
+            plrboi:Kick("Too Many Parts Detected, Launching BHG Client...")
+        end
+        
+end)
